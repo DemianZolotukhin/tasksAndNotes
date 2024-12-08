@@ -23,3 +23,34 @@ console.log(temperature_measurement);
 
 temperature_measurement.push(14);
 console.log(temperature_measurement);
+
+
+
+function reverseArray(array) { // [3, 2, 4]
+    const curr = array.slice();
+    let counter = 0;
+  
+    for (let i = curr.length - 1; i >= 0; i--) {
+      array[counter] = curr[i];
+      counter++;
+    }
+  }
+
+function reverseArray(array) {
+    let left = 0;
+    let right = array.length - 1;
+  
+    while (left < right) {
+      const temp = array[left];
+      array[left] = array[right];
+      array[right] = temp;
+  
+      left++;
+      right--;
+    }
+  }
+  
+  let array = [3, 2, 4];
+  reverseArray(array);
+  
+  console.log(array);
